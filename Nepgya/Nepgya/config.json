@@ -1,0 +1,6 @@
+{
+  "DiscordToken": "",
+  "DiscordTokenType": "Bot",
+  "Logs": "Logs\\Nepgya-{Date}.log",
+  "MinimumLogLevel": "Verbose"
+}
