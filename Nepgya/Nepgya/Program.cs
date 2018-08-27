@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.Interactivity;
+using Nepgya.Challenges;
 using Newtonsoft.Json;
 using Serilog;
 using Serilog.Sinks.SystemConsole.Themes;
@@ -38,7 +39,7 @@ namespace Nepgya
                 .WriteTo.RollingFile(_configuration.Logs)
                 .CreateLogger();
 
-            Log.Logger.Information("Pytta is starting.");
+            Log.Logger.Information("Nepgya is starting.");
 
             var discordConfiguration = new DiscordConfiguration()
             {
@@ -63,6 +64,7 @@ namespace Nepgya
             commands.RegisterCommands<CaptchaChallenge>();
             commands.RegisterCommands<AsciiChallenge>();
             commands.RegisterCommands<MazeChallenge>();
+            commands.RegisterCommands<PuzzleChallenge>();
 
             await discordClient.ConnectAsync();
 
@@ -83,7 +85,7 @@ namespace Nepgya
             Log
                 .Logger
                 .ForContext(e.Command.Name, e.Command)
-                .Information($"{e.Context.User.Username} ran command {e.Command.QualifiedName}.");
+                .Information("{User} ran {Command}.", e.Context.User, e.Command);
             return Task.CompletedTask;
         }
     }

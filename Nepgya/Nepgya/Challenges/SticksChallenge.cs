@@ -11,7 +11,7 @@ using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using DSharpPlus.Interactivity;
 
-namespace Nepgya
+namespace Nepgya.Challenges
 {
     [Group("sticks_challenge")]
     [Description("Play pick-up sticks against the bot.")]

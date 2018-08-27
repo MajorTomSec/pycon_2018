@@ -12,7 +12,7 @@ using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using DSharpPlus.Interactivity;
 
-namespace Nepgya
+namespace Nepgya.Challenges
 {
     [Group("tictactoe_challenge")]
     [Description("Play tic tac toe against the bot.")]

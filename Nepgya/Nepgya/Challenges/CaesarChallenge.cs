@@ -12,7 +12,7 @@ using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using DSharpPlus.Interactivity;
 
-namespace Nepgya
+namespace Nepgya.Challenges
 {
     [Group("caesar_challenge")]
     [Description("Basically an introduction to communication with the bot.")]

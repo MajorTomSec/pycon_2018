@@ -15,7 +15,7 @@ using DSharpPlus.Entities;
 using DSharpPlus.Interactivity;
 using WenceyWang.FIGlet;
 
-namespace Nepgya
+namespace Nepgya.Challenges
 {
     [Group("ascii_challenge")]
     [Description("Solve an ascii captcha.")]

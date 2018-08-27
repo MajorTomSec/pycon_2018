@@ -14,7 +14,7 @@ using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using DSharpPlus.Interactivity;
 
-namespace Nepgya
+namespace Nepgya.Challenges
 {
     [Group("captcha_challenge")]
     [Description("Solve a captcha.")]

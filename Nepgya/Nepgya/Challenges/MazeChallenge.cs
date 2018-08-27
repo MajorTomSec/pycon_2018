@@ -19,7 +19,7 @@ using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using DSharpPlus.Interactivity;
 
-namespace Nepgya
+namespace Nepgya.Challenges
 {
     [Group("maze_challenge")]
     [Description("Find the shortest path to the destination in this maze.")]
@@ -37,7 +37,7 @@ namespace Nepgya
                 var generator = new AlgorithmBacktrack();
                 var map = generator.Generate<BitArreintjeFastInnerMap, NetRandom>(StaticRandom.Next(64, 128), StaticRandom.Next(64, 128), null);
                 int steps;
-                while ((steps = PathFinderDepthFirstSmartWithPos.GoFind(map, null).Count) == 0)
+                while ((steps = PathFinderDepthFirstSmartWithPos.GoFind(map, null).Count - 1) == -1)
                 {
                     map = generator.Generate<BitArreintjeFastInnerMap, NetRandom>(StaticRandom.Next(64, 128), StaticRandom.Next(64, 128), null);
                 }
